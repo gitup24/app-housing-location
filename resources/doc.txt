@@ -1,0 +1,44 @@
+2
+4:13 angular.json build configuration, internationalisation and more
+package.json dependencies
+tsconfig.json ts settings
+app.components.ts new functionalities. Determine what the screen will dispay
+3
+class:
+date from API, or define events for ex. (model)
+template :
+define ui for the component (view)
+style :
+CSS, SAS, LESS. Scoped to our component
+1:32 Hearder. We don t need to make as a component. We add it to the app cpnt template
+1 :48 Case ao search box and search result. Tey are together so we kee them in thier own  cpnt called HomeComponent
+They can be nested and used inside another
+2:02 Photo and location can create a cpnt.
+Style and structure will be the same bute the data different. And will use it IN Home cpnt
+3:20 style:
+ng generate component home --standalone --inline-template
+--standalone reduce complexity and cool features
+--inline-template less files to manage
+4:40 rererence the new cpnt in the template. Section a a link to the header element with a class content as a child of the section element.
+4:51 Add section with a class "content". Lets add our cpnt Wapp-homeX
+5:29 the import tell de dependencies for the child cpnt
+5:57 set a value array to the import
+6:30 mark up in Home cpnt for the search bar and result. Add a section elt with a form as a child.
+And a button with a type attribute set to button
+Another section that ahe the class result. Add the housing location to the result section
+Before let s create a cpnt for it. And we have to import it and add it as a depedency of the Home cpnt
+6:40 add a form as a title <form>. It has no 2 children
+7:30 ng generate component HousingLocation --standalone --inline-template
+8:010 add dependency of the home cpnt
+8:04 add a file of import for HousingLocation cpnt
+Add a file of import for HousingLocation cpnt . But automaticaly after updating decorator array*/
+8:32 add the tag in the section of the template of the same file. Confirmation en cascade avec l'affichage txt "...works!"
+For now we have only this txt in the result section. Add <app-housing-location>
+4
+0:30 add a section elt with the class "listing"
+next , add 3 type elts. image tag with the class "listing-photo". header tag with class "listing-heading". paragraph tag with the class "listing-location"
+1:30 now the HTML does not have any content. Need a special property that mahe housing location unique. Fortubatly we have the feature 'input properties'
+How should that data be configured? In a specific form. It is a job for a type. We create an interface to use in our app.
+3:16 ng generate interface housingLocation
+4:07 we use input data property tu pass our data to our cpnt and use an interface to let our cpnt what type of data we expect.
+You can mark up a cpnr with an input decorator and this tell to angular what king od data can be send in our template.
