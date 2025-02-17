@@ -42,3 +42,34 @@ How should that data be configured? In a specific form. It is a job for a type. 
 3:16 ng generate interface housingLocation
 4:07 we use input data property tu pass our data to our cpnt and use an interface to let our cpnt what type of data we expect.
 You can mark up a cpnr with an input decorator and this tell to angular what king od data can be send in our template.
+4:24 We need to import to include the import from angular/core
+We also need to import he HousingLocation
+Newt in the value of HousingLocation cpnt class , we need a new property called housingLocation of type HousingLocation.
+We have to prefix the HousingLocation property with the input decorator to make it an input property.
+Show an errot because the import expects a value to be passed. So we have to initialize it. In this case we know the value that will be passed in : "!". So update with the "s commision point" as the property name.
+It is called the non asosial operator (?) . I tell typescript compiler that the value of that property won t be known indefined.
+Now our cpnt has an input property named HousingLocation that we can work with
+In  the cpnt decorator metadata let us update the typely property to access the property that we need to display.
+5:53 The image tag need
+5 is a way to navigate beween out cpnt which represent our pages. Same when we click on a lick and navigate to another page
+Home cppnt-XAngular Router-XDetails cpnt
+We need to configure our app to support this router. We could have include ir automaticaly during the setup but more fun by doing herself.
+1:04 in main.ts :
+iùport
+in bootstrapApplication, add a property "provider" whic is an array. And a value in it. A call to the provideRouter function. This empty array represents our app router.
+Router defines which pass link to cpnt in teh app.
+We have to create a file route.ts. touch src/app/routes.ts
+import
+create a constant routeConfig wich value is an array.Need to be availble with an export
+We need to update our app based on the currunt routes : in app.cpnt.ts.
+import RouterModule
+update array od cpnt metaData
+3:23 now we can use the features of the router in our app in the template for this cpnt. With te router directive <router-outlet> which have the same name into braquet.
+We use a directive but now includinf=g a template. We did not change any od the surrounding HTML. THat HTML will persist between the HTML and the navigate tool application.
+4:21 If we save the app and chexk the browser, it will display a black screen with just the header. As expected because we have not defined anoy routes just yet.
+4:36 in routes.ts we have tocreate a route for the home page. In the array let s write a new entry
+path property with the value empty string. The path represents wich URL match with cpnt. Home cpnt by default. That why it is empty.
+To make it better, we add a title
+5:36 Let s add import to the file import list in main.ts. Don t suroung in curly braces. Give acces to the routs that we  defined.
+Then update the providerRouter function call
+5 6:07
